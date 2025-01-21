@@ -1,7 +1,7 @@
-import tensorflow
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 def make_dimensions_divisible(image, factor=4):
     h, w, c = image.shape
@@ -19,9 +19,22 @@ def make_dimensions_divisible(image, factor=4):
     else:
         return image, h, w  # Ako su dimenzije već potencija broja 2, nema paddinga
 
+@tf.keras.utils.register_keras_serializable()
+def combined_loss(y_true, y_pred):
+    ssim_loss = 1 - tf.image.ssim(y_true, y_pred, max_val=1.0)
+
+    # Kreiranje instanciranog objekta klase MeanSquaredError
+    mse = tf.keras.losses.MeanSquaredError()
+    mse_loss = mse(y_true, y_pred)
+
+    return 0.5 * ssim_loss + 0.5 * mse_loss
+
 
 # Učitavanje modela
-model = tensorflow.keras.models.load_model('./spaseni_modeli/model7.keras')
+#model = tensorflow.keras.models.load_model('./spaseni_modeli/model8.keras')
+
+# Učitavanje modela 9
+model = tf.keras.models.load_model('./spaseni_modeli/model9.keras', custom_objects={'combined_loss': combined_loss})
 
 # Učitavanje slike
 image = cv2.imread('./dataset/n02691156_9453.jpg')
