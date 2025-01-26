@@ -1,0 +1,133 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+}
+
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 15px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.small-preview-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.file-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    word-break: break-word;
+}
+
+.button-container-single {
+    margin-top: 20px;
+}
+
+.sketch-btn {
+    font-weight: bold;
+    background-color: black !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+}
+
+.loading-container {
+    margin-top: 30px;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.result-container {
+    margin-top: 30px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-box {
+    max-width: 45%;
+    max-height: 400px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.download-btn {
+    font-weight: bold;
+    background-color: black !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    width: 250px !important;
+}
+
+.sketch-again-btn {
+    font-weight: bold;
+    color: black !important;
+    border: 2px solid black !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    background-color: white !important;
+    width: 250px !important;
+}
+
+
+.pencil-img {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 15%;
+}

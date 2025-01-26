@@ -37,7 +37,7 @@ def combined_loss(y_true, y_pred):
 model = tf.keras.models.load_model('./spaseni_modeli/model9.keras', custom_objects={'combined_loss': combined_loss})
 
 # Učitavanje slike
-image = cv2.imread('./dataset/n02691156_9453.jpg')
+image = cv2.imread('./dataset/woman_cartoon.jpg')
 
 # Dodavanje paddinga (ako je potrebno) i čuvanje originalnih dimenzija
 padded_image, original_h, original_w = make_dimensions_divisible(image, factor=4)

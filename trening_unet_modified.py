@@ -93,6 +93,6 @@ history = model.fit(
 )
 
 # Čuvanje modela
-model.save('./spaseni_modeli/model10.keras')
+model.save('./spaseni_modeli/model9.keras')
 
 print("Završeno treniranje i sačuvan model.")
